@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English&family=League+Gothic&family=REM&family=Righteous&display=swap');
+
+/*--------------------*/
+/*----THEME ROOT------*/
+/*--------------------*/
+
+::-webkit-scrollbar-thumb {
+    background: var(--color1);
+}
+
+::-webkit-scrollbar {
+    width: 3px;
+}
+
+:root.white {
+    --background: white;
+    --color1: black;
+    --color2: #FF3EB5;
+}
+
+
+:root.yellow {
+    --background: #FFE900;
+    --color1: black;
+    --color2: white;
+}
+
+:root.pink {
+    --background: #FF3EB5;
+    --color1: black;
+    --color2: white;
+}
+
+:root.black {
+    --background: black;
+    --color1: white;
+    --color2: #FF3EB5;
+}
+
+:root.green {
+    --background: #31ED31;
+    --color1: black;
+    --color2: white;
+}
+
+.colorpicker {
+    height: 30px;
+    width: 30px;
+}
+
+.colorpicker:hover {
+    outline: 2px solid white;
+}
+
+#colourgrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    width: 200px;
+    margin: 50px;
+}
+
+#themeHeading {
+    margin-left: 50px;
+}
+
+/*--------------------*/
+/*---SITE FORMATTING--*/
+/*--------------------*/
+
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    background-color: var(--background);
+    font-family: 'League Gothic', sans-serif;
+
+}
+
+.main {
+    max-width: 768px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.container {
+    margin: 0px;
+    padding: 0px;
+}
+
+.row {
+    --bs-gutter-x: 0;
+    --bs-gutter-y: 0;
+}
+
+/*--------------------*/
+/*----FRONT PAGE------*/
+/*--------------------*/
+
+#start-screen {
+
+    margin: 0 auto;
+}
+
+#background-image {}
+
+#imgWrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+    filter: grayscale(100%) contrast(150%);
+    margin: 0 auto;
+}
+
+#startButton {
+    padding: 5px 15px;
+    background-color: black;
+    color: #FF3EB5;
+    text-decoration: none;
+}
+
+#compatibleWith {
+    margin: 0 auto;
+    width: 30%;
+}
+
+#gameTitle {
+    color: #FF3EB5;
+}
+
+#license-info {
+    margin: 0 auto;
+}
+
+.license {
+    font-family: 'IM Fell English', serif;
+    color: black;
+    background-color: white;
+    padding: 10px;
+    margin: 10px;
+    font-size: 13px;
+    text-align: justify;
+}
+
+.license i {
+    font-size: 30px;
+}
+
+/*--------------------*/
+/*-----GAME PAGE------*/
+/*--------------------*/
+
+#menu-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+    width: 100vw;
+    z-index: 2;
+    background-color: black;
+}
+
+.menu-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    margin: 15px;
+    font-size: 30px;
+    line-height: 30px;
+    color: white;
+}
+
+.menu {
+    margin-top: 61px;
+    padding-top: 50px;
+    z-index: 1;
+}
+
+#menuLeft {
+    color: white;
+}
+
+#menuRight {
+    color: white;
+}
+
+#rotblack {
+    border: 1px white solid;
+}
+
+#playerStats {
+    width: 200px;
+    margin: 50px;
+}
+
+#inventory {
+    border: 1px white solid;
+}
+
+#heading-box {
+    font-size: xx-large;
+    text-align: center;
+    padding: 80px 10px 10px 10px;
+    color: var(--color2);
+}
+
+#text-box {
+    font-size: large;
+    margin: 10px;
+    padding: 0 50px 20px 50px;
+    text-align: justify;
+    color: var(--color1)
+}
+
+#choice-box {
+    padding: 7px 0 7px 30px;
+}
+
+#direction-box {
+    height: 120px;
+    width: 120px;
+}
+
+.direction-button {
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    font-size: 40px;
+    color: var(--color2)
+}
+
+.direction-button:disabled {
+    opacity: 0.5;
+}
+
+#controls {
+
+    max-width: 100%;
+    width: 100%;
+    margin: 20px 50px;
+}
+
+.choice-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: var(--color1);
+    background-color: var(--color2);
+    display: block;
+    padding: 4px 10px;
+    margin: 5px 0;
+}
+
+.choice-button:disabled {
+    opacity: 0.5;
+}
