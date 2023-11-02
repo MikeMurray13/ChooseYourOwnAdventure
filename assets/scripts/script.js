@@ -259,15 +259,21 @@ function updateInventory(item, slot) {
         case "handL":
             /*1*/ player.inventory.splice(index, 1);
             /*2*/ player.handL != "" ? player.inventory.push(player.handL) : "";
-            if (equippedItem.type === "twohand") { player.handR != "" ? player.inventory.push(player.handR) : ""; player.handR = equippedItem; };
+                    if (player.handL.type === "twohand") {player.handR = ""}
+                    if (equippedItem.type === "twohand") {
+                        player.handR != "" ? player.inventory.push(player.handR) : ""; player.handR = equippedItem; 
+                    };
             /*3*/ player.handL = equippedItem;
 
             break;
         case "handR":
             /*1*/ player.inventory.splice(index, 1);
             /*2*/ player.handR != "" ? player.inventory.push(player.handR) : "";
-            if (equippedItem.type === "twohand") { player.handL != "" ? player.inventory.push(player.handL) : ""; player.handL = equippedItem; };
-            /*3*/ player.handR = equippedItem;
+            if (player.handR.type === "twohand") {player.handL = ""}
+            if (equippedItem.type === "twohand") {
+                player.handL != "" ? player.inventory.push(player.handL) : ""; player.handL = equippedItem; 
+            };
+    /*3*/ player.handR = equippedItem;
             break;
         case "torso":
             /*1*/ player.inventory.splice(index, 1);
