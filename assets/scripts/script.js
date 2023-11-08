@@ -189,6 +189,8 @@ function updateContent() {
     } else {
         document.getElementById("west-button").disabled = false;
     };
+
+    document.getElementById("defence").innerHTML = player.torso.value;
 }
 
 
