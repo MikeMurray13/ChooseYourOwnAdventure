@@ -190,7 +190,13 @@ function updateContent() {
         document.getElementById("west-button").disabled = false;
     };
 
-    document.getElementById("defence").innerHTML = player.torso.value;
+    //Display player defence
+    tor = player.torso.value;
+    hL = player.handL.subtype = "shield" ? player.handL.value : 0;
+    hR = player.handR.subtype = "shield" ? player.handR.value : 0;
+    shields = hL + hR; 
+    def = tor + shields; 
+    document.getElementById("defence").innerHTML = def;
 }
 
 
